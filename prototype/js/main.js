@@ -1,10 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('#note-priority-ranking').ranking({
-        matchElement : 'i',
+        matchElement: 'i',
         value: 3,
         activeClass: 'note-priority-active',
         inactiveClass: 'note-priority-inactive',
-        callbackFunction : function(value) {
+        callbackFunction: function (value) {
             $('.note-priority-value').text(value);
             ranking = value;
         }
@@ -21,13 +21,13 @@ $(document).ready(function() {
     changeForeground(foregroundColor);
     changeBackground(backgroundColor);
 
-    backgroundPicker.on('change', function() {
+    backgroundPicker.on('change', function () {
         var color = $(this).val();
         changeBackground(color);
         saveLocalStorageValue('notes-background', color);
     });
 
-    foregroundPicker.on('change', function() {
+    foregroundPicker.on('change', function () {
         var color = $(this).val();
         changeForeground(color);
         saveLocalStorageValue('notes-foreground', color);

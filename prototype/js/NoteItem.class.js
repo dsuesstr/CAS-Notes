@@ -1,4 +1,4 @@
-var NoteItem = function() {
+var NoteItem = function () {
     this.ID = 0;
     this.Subject = '';
     this.NoteText = '';

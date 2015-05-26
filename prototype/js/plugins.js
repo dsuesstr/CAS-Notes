@@ -1,7 +1,8 @@
 // Avoid `console` errors in browsers that lack a console.
-(function() {
+(function () {
     var method;
-    var noop = function () {};
+    var noop = function () {
+    };
     var methods = [
         'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
         'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
@@ -23,7 +24,9 @@
 
 function loadLocalStorageValue(key, defaultValue) {
     var value = sessionStorage.getItem(key);
-    if(!value) { return defaultValue }
+    if (!value) {
+        return defaultValue
+    }
 
     return JSON.parse(value);
 }
@@ -41,11 +44,9 @@ function changeForeground(color) {
 }
 
 
-
-
 // Place any jQuery/helper plugins in here.
-(function ( $ ) {
-    $.fn.ranking = function( options ) {
+(function ($) {
+    $.fn.ranking = function (options) {
 
         // private vars
         var settings = $.extend({
@@ -54,19 +55,20 @@ function changeForeground(color) {
             value: 0,
             activeClass: 'priority-active',
             inactiveClass: 'priority-inactive',
-            dataValueAttribute : 'data-ranking-value',
-            callbackFunction : function(value) {}
+            dataValueAttribute: 'data-ranking-value',
+            callbackFunction: function (value) {
+            }
         }, options);
 
         // private methods
-        var setRanking = function(element, value, setValue) {
-            if(setValue === true) {
+        var setRanking = function (element, value, setValue) {
+            if (setValue === true) {
                 $(element).attr(settings.dataValueAttribute, value);
                 settings.callbackFunction(value);
             }
 
             $(element).children(settings.matchElement).each(function (index) {
-                if(setValue === true) {
+                if (setValue === true) {
                     $(this).attr(settings.dataValueAttribute, index + 1);
                 }
 
@@ -83,7 +85,7 @@ function changeForeground(color) {
             return value;
         };
 
-        var addHandlers = function(element) {
+        var addHandlers = function (element) {
             $(element).children(settings.matchElement).mouseenter(function () {
                 setRanking($(this).parent(), $(this).attr(settings.dataValueAttribute), false);
             });
@@ -98,12 +100,12 @@ function changeForeground(color) {
             });
         };
 
-        if(settings.readOnly === false) {
+        if (settings.readOnly === false) {
             addHandlers(this);
         }
 
         setRanking(this, settings.value, true);
     };
 
-}( jQuery ));
+}(jQuery));
 

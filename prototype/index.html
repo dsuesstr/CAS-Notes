@@ -16,7 +16,8 @@
 </head>
 <body>
 <!--[if lt IE 8]>
-<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <header>
@@ -29,8 +30,8 @@
     </ul>
 
     <ul class="nav-style">
-        <li><label for="notes-background">Background:</label> <input type="color" id="notes-background" /></li>
-        <li><label for="notes-foreground">Foreground:</label> <input type="color" id="notes-foreground" /></li>
+        <li><label for="notes-background">Background:</label> <input type="color" id="notes-background"/></li>
+        <li><label for="notes-foreground">Foreground:</label> <input type="color" id="notes-foreground"/></li>
     </ul>
     <ul class="nav-order">
         <li><a href="#"><i class="fa fa-sort"></i> By finish date</a></li>
@@ -55,14 +56,19 @@
             <i class="fa fa-bolt note-priority-active"></i>
         </div>
         <div class="note-state">
-            <input type="checkbox"> Finished [<time datetime="">Yesterday</time>]
+            <input type="checkbox"> Finished [
+            <time datetime="">Yesterday</time>
+            ]
         </div>
         <div class="description">
 
-                <details>
-                    <summary>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</summary>
-                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchang</p>
-                </details>
+            <details>
+                <summary>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</summary>
+                <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+                    only five centuries, but also the leap into electronic typesetting, remaining essentially
+                    unchang</p>
+            </details>
         </div>
         <div class="note-actions">
             <ul>
@@ -81,7 +87,7 @@
 <main class="note">
     <form>
         <label for="note-subject">Subject</label>
-        <input type="text" name="subject" id="note-subject" placeholder="Subject" >
+        <input type="text" name="subject" id="note-subject" placeholder="Subject">
 
         <label for="note-description">Description</label>
         <textarea placeholder="Description..." name="note-description" id="note-description"></textarea>
@@ -96,7 +102,7 @@
             <span class="note-priority-value"></span>
         </span>
         <label for="note-duedate">Duedate</label>
-        <input type="date" name="note-duedate" id="note-duedate" >
+        <input type="date" name="note-duedate" id="note-duedate">
         <ul>
             <li><a href="#"><i class="fa fa-check"></i> Save</a></li>
             <li><a href="#"><i class="fa fa-times-circle"></i> Cancel</a></li>
