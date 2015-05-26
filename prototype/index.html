@@ -1,0 +1,119 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Killer Note App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<header>
+
+</header>
+
+<nav>
+    <ul class="nav-create">
+        <li><a href="#"><i class="fa fa-plus"></i> Note</a></li>
+    </ul>
+
+    <ul class="nav-style">
+        <li><label for="notes-background">Background:</label> <input type="color" id="notes-background" /></li>
+        <li><label for="notes-foreground">Foreground:</label> <input type="color" id="notes-foreground" /></li>
+    </ul>
+    <ul class="nav-order">
+        <li><a href="#"><i class="fa fa-sort"></i> By finish date</a></li>
+        <li><a href="#" class="active"><i class="fa fa-sort"></i> By created date</a></li>
+        <li><a href="#"><i class="fa fa-sort"> By priority</i></a></li>
+    </ul>
+    <ul class="nav-filter">
+        <li><a href="#" class="active"><i class="fa fa-check"></i> Show finished</a></li>
+    </ul>
+</nav>
+
+<main class="notes">
+    <article class="note-item">
+        <div class="note-duedate">
+            <time datetime="">Next wednesday</time>
+        </div>
+        <div class="note-subject">
+            CAS FEE Studium...
+        </div>
+        <div class="note-priority">
+            <i class="fa fa-bolt note-priority-active"></i>
+            <i class="fa fa-bolt note-priority-active"></i>
+        </div>
+        <div class="note-state">
+            <input type="checkbox"> Finished [<time datetime="">Yesterday</time>]
+        </div>
+        <div class="description">
+
+                <details>
+                    <summary>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</summary>
+                    <p> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchang</p>
+                </details>
+        </div>
+        <div class="note-actions">
+            <ul>
+                <li><a href="#"><i class="fa fa-pencil"></i> Edit</a></li>
+                <li><a href="#"><i class="fa fa-trash"></i> Delete</a></li>
+            </ul>
+        </div>
+    </article>
+</main>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<main class="note">
+    <form>
+        <label for="note-subject">Subject</label>
+        <input type="text" name="subject" id="note-subject" placeholder="Subject" >
+
+        <label for="note-description">Description</label>
+        <textarea placeholder="Description..." name="note-description" id="note-description"></textarea>
+
+        <label for="note-priority-ranking">Priority</label>
+        <span id="note-priority-ranking">
+            <i class="fa fa-bolt"></i>
+            <i class="fa fa-bolt"></i>
+            <i class="fa fa-bolt"></i>
+            <i class="fa fa-bolt"></i>
+            <i class="fa fa-bolt"></i>
+            <span class="note-priority-value"></span>
+        </span>
+        <label for="note-duedate">Duedate</label>
+        <input type="date" name="note-duedate" id="note-duedate" >
+        <ul>
+            <li><a href="#"><i class="fa fa-check"></i> Save</a></li>
+            <li><a href="#"><i class="fa fa-times-circle"></i> Cancel</a></li>
+            <li><a href="#"><i class="fa fa-trash"></i> Delete</a></li>
+        </ul>
+    </form>
+</main>
+
+<footer>
+
+</footer>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script src="js/NoteItem.class.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
